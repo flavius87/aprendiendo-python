@@ -9,5 +9,5 @@ class Acciones:
         password = input("Elige una contraseña ")
     def login(self):
         print("\nOk, identificate en el sistema...")
-        email = input("Introduce tu email ")
+        email = input("Introduce tu email por favor ser de luz")
         password = input("Elige una contraseña ")
