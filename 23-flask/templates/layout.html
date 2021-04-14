@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %} | Aprendiendo Flask con Victor Robles {% endblock %} </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    </head>
+    <body>
+
+    
+
+        
+    <!--cabecera de la página-->
+    <header>
+        <div id="logotipo">
+            <!--logo django-->
+            <img src="{{ url_for('static', filename='css/img/flask.png') }}" />
+            <h1>Flask con Victor</h1>
+        </div>
+        
+    </header>
+
+    <nav>
+            <ul>
+                <li>
+                    <a href="/">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('crear_coche') }}">Crear coche</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('coches') }}">Listado de coches</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('informacion') }}">Información</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('contacto') }}">Contacto</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('lenguajes') }}">Lenguajes de Programación</a>
+                </li>
+            </ul>
+    </nav>
+
+    <div class= "barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+                <!--Codigo que viene de templates-->
+                <strong>Contenido del bloque original!!</strong>
+            {% endblock %}
+        </div>
+    </div>
+  
+    <footer>
+        Master en Python &copy; Flavio Scheck WEB - {{now.month}}/{{ now.year }}
+    </footer>
+
+
+    </body>
+
+</html>
