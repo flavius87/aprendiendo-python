@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% load filters %}
+{% block title %} Página de pruebas {% endblock %}
+
+{% block content %}
+<h1 class="title">Página de mi web</h1>
+<p>{{ "Creado por Flavio Scheck ñññ"|cut:"ñ" }}</p>
+
+<p>
+    {{texto|default:"No hay nada"}}
+</p>
+
+<p>
+    {{lista|join:', '}}
+</p>
+
+<p>
+    {{lista|length}}
+</p>
+
+<p>
+    {{"texto pruebas"|upper}}
+</p>
+
+
+{{"Flavio"|saludo|safe}}
+
+{% endblock %}
